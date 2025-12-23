@@ -24,9 +24,9 @@ namespace Pustalorc.Plugins.AutoTurnOff
             Logger.Log("Auto Turn Off has been unloaded!");
         }
 
-        private void Disconnected([NotNull] UnturnedPlayer player)
+        private async void Disconnected([NotNull] UnturnedPlayer player)
         {
-            Rocket.Core.Utils.TaskDispatcher.RunAsync(() => {
+            await Rocket.Core.Utils.TaskDispatcher.OffThread(() => {
                 ulong playerId = player.CSteamID.m_SteamID;
 
                 var buildables = BarricadeManager.regions.Cast<BarricadeRegion>().Concat(BarricadeManager.vehicleRegions)
