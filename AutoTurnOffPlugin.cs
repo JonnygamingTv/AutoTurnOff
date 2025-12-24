@@ -135,10 +135,6 @@ namespace Pustalorc.Plugins.AutoTurnOff
                 return i => Rocket.Core.Utils.TaskDispatcher.QueueOnMainThread(
                     () => BarricadeManager.ServerSetOxygenatorPowered((InteractableOxygenator)i, false));
 
-            if (type == typeof(InteractableSpot))
-                return i => Rocket.Core.Utils.TaskDispatcher.QueueOnMainThread(
-                    () => BarricadeManager.ServerSetSpotPowered((InteractableSpot)i, false));
-
             if (type == typeof(InteractableGenerator))
                 return i => Rocket.Core.Utils.TaskDispatcher.QueueOnMainThread(
                     () => BarricadeManager.ServerSetGeneratorPowered((InteractableGenerator)i, false));
