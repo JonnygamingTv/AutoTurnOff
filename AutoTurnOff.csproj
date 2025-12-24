@@ -58,6 +58,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
     <Reference Include="UnityEngine">
       <HintPath>lib\UnityEngine.dll</HintPath>
       <Private>False</Private>
@@ -70,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Configuration\AutoTurnOffConfiguration.cs" />
     <Compile Include="AutoTurnOffPlugin.cs" />
+    <Compile Include="Configuration\InteractableItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
